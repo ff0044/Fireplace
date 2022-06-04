@@ -85,17 +85,13 @@ print("")
 print("")
 print("")
 
-#moving variables
-north = 'W', 'w'
-south = 'S', 's'
-east = 'D', 'd'
-west = 'A', 'a'
+
 
 #variables
-hallway = Fore.GREEN + 'hallway'
+hallway = Fore.GREEN + 'hallway' + Fore.RESET
 error = Fore.RED + 'Cannot move there'
 
-#start of game
+#character's bedroom
 def bedroom():
     print("You are in your bedroom")
     print('All you can hear is white noise, and it is pitch dark')
@@ -109,7 +105,7 @@ def bedroom():
     print("There is a toy chest behind you, and a bed in front of you")
     print("")
     movement1 = input("What do you do? > ")
-    if movement1 == south:
+    if movement1 == 'S' or 's':
         time.sleep(1)
         print("")
         print("You see a toy chest")
@@ -126,6 +122,16 @@ def bedroom():
         print("You put the toy in your bag")
         time.sleep(1)
         print("")
-    elif movement1 == north or west or east:
+    elif movement1 == 'N' or 'n':
         time.sleep(1)
+        print("")
+        print("You walk towards the bed")
+        print("")
+        print("You want to sleep, but you are too curious to")
+        print("")
+    elif movement1 == 'E' or 'e':
+        hallway()
+    elif movement1 == 'W' or 'w':
         print(error)
+
+bedroom()

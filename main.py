@@ -100,16 +100,14 @@ def bedroom():
     time.sleep(1.5)
     print("")
 
-    def bedroomoptions():
-        print("You have the option to exit the door to your left")
-        print(f"If you leave, you will be transported to the {hallway}")
-        print("")
-        print("There is a toy chest behind you, and a bed in front of you")
-        print("")
-
-    bedroomoptions()
-
-    movement1 = input("What do you do? > ")
+    print("You have the option to exit the door to your left")
+    print(f"If you leave, you will be transported to the {hallway}")
+    print("")
+    print("There is a toy chest behind you, and a bed in front of you")
+    print("")
+    
+    print("What do you do? > ")
+    movement1 = input()
 
     if movement1 == 'S' or 's':
         time.sleep(1)
@@ -175,5 +173,14 @@ def hallway():
         sisterbedroom()
     elif movement2 == 'D' or 'd':
         bedroom()
+    
+#stairs
+def stairs():
+    print("You are about to go down the stairs when suddenly...")
+    time.sleep(1)
+    print(f"{Fore.RED}CRASH{Fore.RESET}")
+    print("You tumble down the stairs")
+    print("You are bleeding everywhere, and your sense of smell is slowly fading away")
+    print("Quickly, grab the" + Fore.GREEN + " Detergent " + Fore.RESET + "and " + Fore.GREEN + "Bandages from your " + Fore.BLUE + "parents " + Fore.RESET + "room!")
 
     

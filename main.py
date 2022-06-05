@@ -89,7 +89,7 @@ print("")
 
 #variables
 hallway = Fore.GREEN + 'hallway' + Fore.RESET
-error = Fore.RED + 'Cannot move there'
+moveerror = Fore.RED + 'Cannot move there'
 
 #character's bedroom
 def bedroom():
@@ -99,12 +99,18 @@ def bedroom():
     print(Fore.RED + "You can type W, A, S, D to move around" + Fore.RESET)
     time.sleep(1.5)
     print("")
-    print("You have the option to exit the door to your left")
-    print(f"If you leave, you will be transported to the {hallway}")
-    print("")
-    print("There is a toy chest behind you, and a bed in front of you")
-    print("")
+
+    def bedroomoptions():
+        print("You have the option to exit the door to your left")
+        print(f"If you leave, you will be transported to the {hallway}")
+        print("")
+        print("There is a toy chest behind you, and a bed in front of you")
+        print("")
+
+    bedroomoptions()
+
     movement1 = input("What do you do? > ")
+
     if movement1 == 'S' or 's':
         time.sleep(1)
         print("")
@@ -122,6 +128,10 @@ def bedroom():
         print("You put the toy in your bag")
         time.sleep(1)
         print("")
+        print("Acquired toy")  
+        time.sleep(1)      
+        bedroom()
+
     elif movement1 == 'N' or 'n':
         time.sleep(1)
         print("")
@@ -129,9 +139,41 @@ def bedroom():
         print("")
         print("You want to sleep, but you are too curious to")
         print("")
+        bedroom()
+
     elif movement1 == 'E' or 'e':
         hallway()
+
     elif movement1 == 'W' or 'w':
-        print(error)
+        print(moveerror)
 
 bedroom()
+
+def hallway():
+    #loading
+    print("Loading...")
+    animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
+
+    for i in range(len(animation)):
+        time.sleep(0.2)
+        sys.stdout.write("\r" + animation[i % len(animation)])
+        sys.stdout.flush()
+    
+    print("You are in the hallway")
+    print(f"There is your {Fore.RED}bedroom{Fore.RESET} to the right of you")
+    print("Your parents room and bathroom is to the left of you")
+    print("Your sister has her room behind you")
+    print("In front of you, you can go down the stairs to the bottom floor")
+    movement2 = input("What do you pick? >")
+
+    #movement 2
+    if movement2 == 'W' or 'w':
+        stairs()
+    elif movement2 == 'A' or 'a':
+        parentsbedroom()
+    elif movement2 == 'S' or 's':
+        sisterbedroom()
+    elif movement2 == 'D' or 'd':
+        bedroom()
+
+    

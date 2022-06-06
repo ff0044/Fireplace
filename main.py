@@ -130,7 +130,7 @@ def bedroom():
         time.sleep(1)      
         bedroom()
 
-    elif movement1 == 'N' or 'n':
+    elif movement1 == 'W' or 'w':
         time.sleep(1)
         print("")
         print("You walk towards the bed")
@@ -139,10 +139,10 @@ def bedroom():
         print("")
         bedroom()
 
-    elif movement1 == 'E' or 'e':
+    elif movement1 == 'A' or 'a':
         hallway()
 
-    elif movement1 == 'W' or 'w':
+    elif movement1 == 'D' or 'd':
         print(moveerror)
 
 bedroom()

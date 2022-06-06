@@ -129,8 +129,7 @@ def bedroom():
         print("Acquired toy")  
         time.sleep(1)      
         bedroom()
-
-    elif movement1 == 'W' or 'w':
+    if movement1 == 'W' or 'w':
         time.sleep(1)
         print("")
         print("You walk towards the bed")
@@ -138,11 +137,9 @@ def bedroom():
         print("You want to sleep, but you are too curious to")
         print("")
         bedroom()
-
-    elif movement1 == 'A' or 'a':
+    if movement1 == 'A' or 'a':
         hallway()
-
-    elif movement1 == 'D' or 'd':
+    if movement1 == 'D' or 'd':
         print(moveerror)
 
 bedroom()

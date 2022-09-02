@@ -1,11 +1,6 @@
 #text based adventure game
 
-#import libraries
-from re import T
-import time
-import sys
-from colorama import Fore
-import os
+from imports import *
 
 #character info
 print(Fore.RED + "FIREPLACE")
@@ -92,11 +87,11 @@ hallway = Fore.GREEN + 'hallway' + Fore.RESET
 moveerror = Fore.RED + 'Cannot move there'
 
 #character's bedroom
-def bedroom():
+def character_bedroom():
     print("You are in your bedroom")
     print('All you can hear is white noise, and it is pitch dark')
     print("You can only move north, south, east or west")
-    print(Fore.RED + "You can type W, A, S, D to move around" + Fore.RESET)
+    print(Fore.RED + "You can type 1 (W), 2 (A), 3 (S), 4 (D) to move around" + Fore.RESET)
     time.sleep(1.5)
     print("")
 
@@ -106,10 +101,9 @@ def bedroom():
     print("There is a toy chest behind you, and a bed in front of you")
     print("")
     
-    print("What do you do? > ")
-    movement1 = input()
+    movement1 = input("What do you do? >>")
 
-    if movement1 == 'S' or 's':
+    if movement1 == '3':
         time.sleep(1)
         print("")
         print("You see a toy chest")
@@ -128,21 +122,21 @@ def bedroom():
         print("")
         print("Acquired toy")  
         time.sleep(1)      
-        bedroom()
-    if movement1 == 'W' or 'w':
+        character_bedroom()
+    if movement1 == '1':
         time.sleep(1)
         print("")
         print("You walk towards the bed")
         print("")
         print("You want to sleep, but you are too curious to")
         print("")
-        bedroom()
-    if movement1 == 'A' or 'a':
+        character_bedroom()
+    if movement1 == '2':
         hallway()
-    if movement1 == 'D' or 'd':
+    if movement1 == '4':
         print(moveerror)
 
-bedroom()
+character_bedroom()
 
 def hallway():
     #loading
@@ -160,16 +154,15 @@ def hallway():
     print("Your sister has her room behind you")
     print("In front of you, you can go down the stairs to the bottom floor")
     movement2 = input("What do you pick? >")
-
     #movement 2
-    if movement2 == 'W' or 'w':
+    if movement2 == '1':
         stairs()
-    elif movement2 == 'A' or 'a':
-        parentsbedroom()
-    elif movement2 == 'S' or 's':
-        sisterbedroom()
-    elif movement2 == 'D' or 'd':
-        bedroom()
+    elif movement2 == '2':
+        print("not ready yet")
+    elif movement2 == '3':
+        print("not ready yet")
+    elif movement2 == '4':
+        print("not ready yet")
     
 #stairs
 def stairs():

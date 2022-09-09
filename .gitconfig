@@ -1,0 +1,11 @@
+[user]
+  signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJl9+p2HyyHH+Fug3f/F6pRLgOvgUSIamlkUG0EJN9KtRwE/gU0BjplN4xshCramOon4qpyevO0n3ZTh93FcqonaDvk6/DC34Nz2waNsZAa0dfVCSewwImY9xOmh/+p3i7Y7XYKplcbmjpy3RICufn83Dx/uS72RATxvCfChyhOHcJYVL4qi9sl0328eRMJscyXeOpe56SFM8KgH1ZlnrOTNewEwuEmh+i/QaCWq3+t5wZWEnTWSSM61We4KQzuodSDfIPLw9b8S+Z9htaGtub7rjbO72hsagFDyInxQNZBoIeZZE2E23KLLQtJw9dQFN4vJX9FRj486RIKkHdDfgk2dU6aCdDueg2XoYeJRPQxIGUTvlSzobJB/77E+hS/K5qm9xYLQ0kszkqODI+ty05EnyP8RklgbAbAyqP+Fm01Bn3Wp9eQ1dz1+9lYMVLhHXaYzuLVw4cr4oqSpg/u5QJKMtGLpYth6LHDtN/eFQZGJNCBbj3vIYMtW2LRhI1mxk=
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "C:/Users/thrib/AppData/Local/1Password/app/8/op-ssh-sign.exe"
+
+[commit]
+  gpgsign = true

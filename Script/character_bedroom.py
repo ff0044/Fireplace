@@ -1,6 +1,7 @@
+import variables
 from imports import *
 from hallway import *
-
+from variables import *
 def character_bedroom():
     print("You are in your bedroom")
     print('All you can hear is white noise, and it is pitch dark')
@@ -10,7 +11,7 @@ def character_bedroom():
     print("")
 
     print("You have the option to exit the door to your left")
-    print(f"If you leave, you will be transported to the {hallway}")
+    print(f"If you leave, you will be transported to the {variables.hallway}")
     print("")
     print("There is a toy chest behind you, and a bed in front of you")
     print("")

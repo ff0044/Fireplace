@@ -1,5 +1,6 @@
 from imports import *
 from loading import *
+from stairs import *
 
 def hallway():
     #loading

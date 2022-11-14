@@ -1,18 +1,13 @@
 #text based adventure game
+from variables import *
 from imports import *
 from cutscene import *
 from loading import *
 from stairs import *
 from hallway import *
+from character_bedroom import *
 
-#character info
-print(Fore.RED + "FIREPLACE")
-time.sleep(0.5)
-print(Fore.RESET)
-print("What is your character's name?")
-charName = Fore.GREEN + input()
-print("Hello there " + charName + "")
-print(Fore.RESET)
+char_info()
 
 #skip cutscene
 print("You can skip the cutscene by pressing ENTER")
@@ -39,19 +34,5 @@ print("")
 print("")
 print("")
 print("")
-
-
-
-#variables
-hallway = Fore.GREEN + 'hallway' + Fore.RESET
-moveerror = Fore.RED + 'Cannot move there'
-
-#character's bedroom
-
-
+# run character_bedroom in character_bedroom.py
 character_bedroom()
-
-
-
-#stairs
-stairs()

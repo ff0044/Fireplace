@@ -1,8 +1,11 @@
+import variables
 from imports import *
+from variables import *
+
 def cutscene():
     print(Fore.RESET)
     time.sleep(1)
-    print("You" + Fore.RESET + " have a sister, a mother, a father and a dog")
+    print(variables.charname + Fore.RESET + " have a sister, a mother, a father and a dog")
     time.sleep(1)
     print(Fore.RESET)
     print("But one day, ")

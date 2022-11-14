@@ -16,6 +16,8 @@ To run the game, just download the file, unzip it and (for windows users) run th
 
 
 ### Currently collaborating with this project:
+
 Bird-Of-War
+
 CycoZen
 

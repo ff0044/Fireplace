@@ -10,7 +10,7 @@ To run the game, just download the file, unzip it and (for windows users) run th
 
 ---------
 
-## Project will be finished by January 2024
+## Project will be finished by ~~January 2024~~ its joever bro 😭😭😭😭🙏🙏🙏💯💯💯 this project is never seeing daylight yall
 
 ---------
 
